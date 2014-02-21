@@ -12,19 +12,29 @@
         // Evenly divisible by 5 - "buzz"
         // 15 - "fizz buzz"
         
-        function fizzbuzz(i) {
-            if (i > 100) return;
-            if (i%15===0)
-                document.write("fizzbuzz<br />");
-            else if (i%3===0)
-                document.write("fizz<br />");
-            else if (i%5===0)
-                document.write("buzz<br />");
-            else
-                document.write(i+"<br />");  
-            fizzbuzz(i+1);
+        
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+        
+        function in_range(i) {
+            return i>0&&i<=100;
         }
-        fizzbuzz(1);
+        function fizzbuzz_value(i) {
+            if (i%15===0)
+               return "fizzbuzz";
+            else if (i%3===0)
+                return "fizz";
+            else if (i%5===0)
+               return "buzz";
+            else
+              return i; 
+        }
+        
+        (function fizzbuzz(range,value) {
+            var i=0;
+            while (range(++i)) {
+                document.write(value(i)+"<br />");
+            }
+        })(in_range,fizzbuzz_value);
     
         </script>
     </body>
