@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
-<html lang="en-us">
-
-<head>
-<meta charset="utf-8">
-<title>Hello...</title>
-
-</head>
-
-<body>
-<h1>hello world mike</h1>
-<script> 
-
-</script>
-
-</body>
+<html>
+    <head>
+        <title>Hello...</title>
+    </head>
+    
+    <body>
+       
+        <script>
+        // Print numbers 1 through 100
+        // Evenly divisible by 3 - "fizz"
+        // Evenly divisible by 5 - "buzz"
+        // 15 - "fizz buzz"
+        
+        for (var i = 1; i <=100; i++) {
+            if (i%15===0)
+                document.write("fizzbuzz<br />");
+            else if (i%3===0)
+                document.write("fizz<br />");
+            else if (i%5===0)
+                document.write("buzz<br />");
+            else
+                document.write(i+"<br />");   
+        }
+    
+        </script>
+    </body>
 </html>
