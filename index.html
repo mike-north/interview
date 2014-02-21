@@ -8,36 +8,7 @@
        
         <script>
         // Print numbers 1 through 100
-        // Evenly divisible by 3 - "fizz"
-        // Evenly divisible by 5 - "buzz"
-        // 15 - "fizz buzz"
-        
-        
-        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
-        
-        // https://github.com/nzakas/computer-science-in-javascript
-        
-        var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        
-        // arr.fizbuzz();
-        
-        function fizzbuzz_value(i) {
-            if (i%15===0)
-               return "fizzbuzz";
-            else if (i%3===0)
-                return "fizz";
-            else if (i%5===0)
-               return "buzz";
-            else
-              return i; 
-        }
-        
-        Array.prototype.fizzbuzz = function() {
-            for (var i = 0; i < this.length; i++) {
-                document.write(fizzbuzz_value(this[i])+"<br />");
-            }    
-        }
-        arr.fizzbuzz();
+       
     
         </script>
     </body>
