@@ -16,29 +16,60 @@
         // Evenly divisible by 5 - "buzz"
         // Evenly divisible by both 3 and 5 - "fizz buzz"
        
-       function iterate (number) {
-           
-           
-        if (number === 100) { return true };
+       //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+      
+      // something.functionName( function () {} <-- );
+      
+      function createRange(start, end) {
+          var arr = [];
+          for (var i = start; i < end; i += 1) {
+              arr[i] = i;
+          }
+          return arr;
+        }
+      
+      
+      function printer (number) {
+         $(".numbers").append(number);
+          
+        //   var value = number;
         
-        var value = number;
+        //  if (number % 3 === 0 && (number % 5 === 0)) {
+        //         value = "fizz buzz"
+        //     } else if (number % 5 === 0) {
+        //         value = "buzz"    
+        //     } else if (number % 3 === 0) {
+        //         value = "fizz"   
+        //     }
         
-         if (number % 3 === 0 && (number % 5 === 0)) {
-                value = "fizz buzz"
-            } else if (number % 5 === 0) {
-                value = "buzz"    
-            } else if (number % 3 === 0) {
-                value = "fizz"   
-            }
-        
-        $(".numbers").append("<div class='number'>" + value + "</div>");
-        
-        var arg = number + 1;
-        
-        iterate (arg);
-       }
+        // $(".numbers").append("<div class='number'>" + value + "</div>");
+      }
+      
+    createRange(1,101).each(printer($(this)));
        
-      iterate(1);
+    //   function iterate (number) {
+           
+           
+    //     if (number === 100) { return true };
+        
+    //     var value = number;
+        
+    //      if (number % 3 === 0 && (number % 5 === 0)) {
+    //             value = "fizz buzz"
+    //         } else if (number % 5 === 0) {
+    //             value = "buzz"    
+    //         } else if (number % 3 === 0) {
+    //             value = "fizz"   
+    //         }
+        
+    //     $(".numbers").append("<div class='number'>" + value + "</div>");
+        
+    //     var arg = number + 1;
+        
+    //     iterate (arg);
+    //   }
+       
+    //   iterate(1);
        
         
     //   for (var counter = 1; counter <= 100; counter++) {
