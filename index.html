@@ -12,7 +12,8 @@
         // Evenly divisible by 5 - "buzz"
         // 15 - "fizz buzz"
         
-        for (var i = 1; i <=100; i++) {
+        function fizzbuzz(i) {
+            if (i > 100) return;
             if (i%15===0)
                 document.write("fizzbuzz<br />");
             else if (i%3===0)
@@ -20,8 +21,10 @@
             else if (i%5===0)
                 document.write("buzz<br />");
             else
-                document.write(i+"<br />");   
+                document.write(i+"<br />");  
+            fizzbuzz(i+1);
         }
+        fizzbuzz(1);
     
         </script>
     </body>
